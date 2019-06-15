@@ -32,10 +32,10 @@ class LogInViewController: UIViewController {
         //TODO: Log in the user
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
             if error != nil {
-                print("FUCKING ERROR SIGNING IN. FUCK: \(error)")
+                print("ERROR SIGNING IN. FUCK: \(error)")
             } else {
                 
-                print("FUCK YEAH WE ARE SIGNED IN.")
+                print("WE ARE SIGNED IN.")
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "goToChat", sender: self)
             }

@@ -66,6 +66,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
         cell.messageBody.text = messageArray[indexPath.row].messageBody
+        cell.senderUsername.textColor = UIColor.white
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageView.image = UIImage(named: "egg")
         
@@ -197,7 +198,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch {
-            print("There is a fucking error signing out: \(error)")
+            print("There is an error signing out: \(error)")
         }
         
     }
