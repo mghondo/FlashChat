@@ -17,7 +17,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        passwordTextfield.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
